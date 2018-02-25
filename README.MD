@@ -1,8 +1,14 @@
 ## 中文说明
 [https://github.com/TensorFlowNews/TensorFlow-Bitcoin-Robot/blob/master/README_CN.MD](https://github.com/TensorFlowNews/TensorFlow-Bitcoin-Robot/blob/master/README_CN.MD)
 
-##  Into
+##  Intro
 A Bitcoin trade robot based on Tensorflow LSTM model.Just for fun.
+
+## Requirements
+1. Install Python >= 3.6
+2. pip3 install requests matplotlib tensorflow
+
+
 
 ##  DataSet
 The data is got from https://api.btctrade.com/api/trades?coin=btc with requests.It includes 50 trades of Bitcoin.
