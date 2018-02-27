@@ -5,16 +5,16 @@ import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
 
 def get_trades():
-    re=requests.get('https://api.btctrade.com/api/trades?coin=btc')
+    re=requests.get('https://api.kraken.com/0/public/Trades?pair=XBTEUR')
     content=re.content
-    trades=json.loads(content)
+    history=json.loads(content)
     date=[]
     price=[]
     amount=[]
-    for trade in trades:
-        date.append(trade['date'])
-        price.append(trade['price'])
-        amount.append(trade['amount'])
+    for trade in history['result']['XXBTZEUR']:
+        date.append(trade[2])
+        price.append(float(trade[0]))
+        amount.append(float(trade[0])*float(trade[1]))
     return date,price,amount
 
 def main():
